@@ -2,9 +2,15 @@ import json
 
 
 def load_data(filepath):
-    with open(filepath, 'r') as fp:
-        parsed_file = json.load(fp)
-        return parsed_file
+    try:
+        with open(filepath, 'r') as fp:
+            parsed_file = json.load(fp)
+            return parsed_file
+
+    except (FileNotFoundError) as err:
+        print('Файл не найден!')
+    except (IOError, Exception) as err:
+        print(err)                
 
 
 def pretty_print_json(data):
@@ -16,4 +22,3 @@ def pretty_print_json(data):
 if __name__ == '__main__':
     filepath = input('Введите путь до файла: ')
     print(pretty_print_json(filepath))
-
