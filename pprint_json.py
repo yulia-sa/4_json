@@ -1,4 +1,6 @@
-import json
+import sys, json
+
+filepath = sys.argv[1]
 
 
 def load_data(filepath):
@@ -20,5 +22,4 @@ def pretty_print_json(data):
 
 
 if __name__ == '__main__':
-    filepath = input('Введите путь до файла: ')
     print(pretty_print_json(filepath))
