@@ -16,9 +16,9 @@ def load_data(filepath):
         print(err)                
 
 
-def pretty_print_json(data):
-    data = load_data(filepath)
-    pretty_json = json.dumps(data, indent=4, ensure_ascii=False, sort_keys=False)
+def pretty_print_json(raw_json_data):
+    raw_json_data = load_data(filepath)
+    pretty_json = json.dumps(raw_json_data, indent=4, ensure_ascii=False, sort_keys=False)
     return pretty_json
 
 
