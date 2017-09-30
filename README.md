@@ -1,6 +1,6 @@
 # Prettify JSON
 
-This script pretty-prints the contents of “unformatted.json”.
+This script pretty-prints the contents of unformatted JSON.
 
 # Quickstart
 
