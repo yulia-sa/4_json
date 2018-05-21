@@ -13,14 +13,15 @@ def load_data(filepath):
     except (FileNotFoundError) as err:
         print('Файл не найден!')
     except (IOError, Exception) as err:
-        print(err)                
+        print(err)
 
 
 def pretty_print_json(raw_json_data):
-    raw_json_data = load_data(filepath)
-    pretty_json = json.dumps(raw_json_data, indent=4, ensure_ascii=False, sort_keys=False)
-    return pretty_json
+    pretty_json = json.dumps(raw_json_data, indent=4,
+                             ensure_ascii=False, sort_keys=False)
+    print(pretty_json)
 
 
 if __name__ == '__main__':
-    print(pretty_print_json(filepath))
+    raw_json_data = load_data(filepath)
+    pretty_print_json(raw_json_data)
